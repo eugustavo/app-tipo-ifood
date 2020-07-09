@@ -1,4 +1,5 @@
 import React from 'react';
+import { StatusBar } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
 
@@ -10,10 +11,13 @@ export default function Splash() {
   const navigation = useNavigation();
 
   return (
-    <S.Container source={backgroundImage}>
-      <S.TitleButton onPress={() => navigation.navigate('sign-in')}>
-        <S.Title>Foodybite</S.Title>
-      </S.TitleButton>
-    </S.Container>
+    <>
+      <StatusBar hidden />
+      <S.Container source={backgroundImage}>
+        <S.TitleButton onPress={() => navigation.navigate('sign-in')}>
+          <S.Title>Foodybite</S.Title>
+        </S.TitleButton>
+      </S.Container>
+    </>
   );
 }

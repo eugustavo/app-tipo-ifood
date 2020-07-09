@@ -13,7 +13,11 @@ export default function Home() {
 
   return (
     <>
-      <StatusBar backgroundColor="#FFF" barStyle="dark-content" />
+      <StatusBar
+        backgroundColor="#FFF"
+        barStyle="dark-content"
+        hidden={false}
+      />
       <S.SafeAreaContainer>
         <S.FindInputContainer>
           <S.FindInputButtonContainer>
